@@ -1,0 +1,2 @@
+console.log("\n======================================== As Crônica de Aerithor ========================================\n");
+console.log("\nNas terras místicas de Eldoria, onde a magia e a tecnologia coexistem de maneira intrincada,\nhá um equilíbrio delicado mantido pelas Três Grandes Relíquias:\na Lâmina de Valtor, o Cristal de Lumen e a Coroa de Aetherion.\nEssas relíquias foram forjadas na Era dos Primordiais para proteger o mundo das forças da escuridão.\n");
