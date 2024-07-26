@@ -2,15 +2,15 @@ const prompt = require("../prompt/prompt");
 
 function introducao() {
     console.log("\n======================================== As Crônica de Aerithor ========================================\n");
-    console.log("\nNas terras místicas de Eldoria, onde a magia e a tecnologia coexistem de maneira intrincada, há um\nequilíbrio delicado mantido pelas Três Grandes Relíquias: A Lâmina de Valtor, o Cristal de Lumen\ne a Coroa de Aetherion. Essas relíquias foram forjadas na Era dos Primordiais para proteger o mundo\ndas forças da escuridão.\n");
-    console.log("Por séculos, Eldoria prosperou em paz sob a proteção das relíquias. No entanto, um mal antigo, há muito\nadormecido, despertou. Azrak, o Senhor das Sombras, um ser de pura maldade, deseja apoderar-se das relíquias\npara mergulhar Eldoria na escuridão eterna.\n");
+    console.log("\nNas terras místicas de Aetherion, onde a magia e a tecnologia coexistem de maneira intrincada, há um\nequilíbrio delicado mantido pelas Três Grandes Relíquias: A Lâmina de Valtor, o Cristal de Lumen\ne a Coroa de Aetherion. Essas relíquias foram forjadas na Era dos Primordiais para proteger o mundo\ndas forças da escuridão.\n");
+    console.log("Por séculos, Aetherion prosperou em paz sob a proteção das relíquias. No entanto, um mal antigo, há muito\nadormecido, despertou. Azrak, o Senhor das Sombras, um ser de pura maldade, deseja apoderar-se das relíquias\npara mergulhar Aetherion na escuridão eterna.\n");
     console.log("\nVocê, herói, foi escolhido pelo Conselho dos Sábios para embarcar em uma jornada épica para recuperar\nas relíquias antes que Azrak as encontre. Sua aventura começa na pacata aldeia de Thaloria.\n");
 }
 
 function epilogo() {
     console.log("\n            =================================== Epílogo =======================================            \n");
     console.log("Eldorion, o Sábio:");
-    console.log("Parabéns, herói. Com Azrak derrotado, as Três Grandes Relíquias estão seguras e Eldoria pode finalmente\nrespirar em paz. Você será lembrado como o Salvador de Eldoria, e sua história será contada por gerações.\n");
+    console.log("Parabéns, herói. Com Azrak derrotado, as Três Grandes Relíquias estão seguras e Aetherion pode finalmente\nrespirar em paz. Você será lembrado como o Salvador de Aetherion, e sua história será contada por gerações.\n");
     
     console.log("Lyria:");
     console.log("Foi uma honra lutar ao seu lado. Sempre terei um lugar para você em Lumoria.\n");
@@ -19,9 +19,9 @@ function epilogo() {
     console.log("Volte sempre que precisar de bons negócios, herói. Tenho certeza de que nossas\njornadas se cruzarão novamente.\n");
 
     console.log("Elara:");
-    console.log("Seu destino é grandioso, herói. A magia de Eldoria sempre estará ao seu lado.\n");
+    console.log("Seu destino é grandioso, herói. A magia de Aetherion sempre estará ao seu lado.\n");
 
-    console.log("E assim, a paz e a prosperidade retornam a Eldoria. O herói é celebrado em\ntodas as terras, e uma nova era de luz e esperança começa.\n");
+    console.log("E assim, a paz e a prosperidade retornam a Aetherion. O herói é celebrado em\ntodas as terras, e uma nova era de luz e esperança começa.\n");
     console.log("                               Fim!\n");
 }
 
@@ -58,7 +58,7 @@ function dialogoLyria() {
 }
 
 function fase1() {
-    console.log("Após um intenso treinamento com Lyria, você está pronto para enfrentar os desafios\nde Eldoria. Sua primeira missão é recuperar a Lâmina de Valtor, escondida nas profundezas da\nFloresta Negra.\n");
+    console.log("Após um intenso treinamento com Lyria, você está pronto para enfrentar os desafios\nde Aetherion. Sua primeira missão é recuperar a Lâmina de Valtor, escondida nas profundezas da\nFloresta Negra.\n");
     console.log("A Floresta Negra é um vasto e sombrio bosque, onde árvores antigas se entrelaçam formando");
     console.log("um denso teto de folhas que bloqueia a luz do sol. O ar é pesado com o cheiro de terra úmida");
     console.log("e a sensação de uma presença misteriosa em cada sombra.\n");
@@ -94,7 +94,7 @@ function fase1() {
     if (escolha == "1") {
         console.log("Você enfrenta o guardião em uma batalha épica. Suas habilidades são testadas, mas você prevalece,\nganhando a Lâmina de Valtor.");
     } else {
-        console.log("Você fala ao guardião sobre sua missão e as ameaças que Eldoria enfrenta. Comovido por sua\ndeterminação e coragem, o guardião permite que você tome a Lâmina de Valtor sem lutar.");
+        console.log("Você fala ao guardião sobre sua missão e as ameaças que Aetherion enfrenta. Comovido por sua\ndeterminação e coragem, o guardião permite que você tome a Lâmina de Valtor sem lutar.");
     }
 
     console.log("\nCom a Lâmina de Valtor em mãos, você retorna a Lumoria, pronto para o próximo desafio.\n");
@@ -180,7 +180,72 @@ function fase2() {
 }
 
 function fase3() {
-    console.log("De volta a Lumoria, você encontra Elara, uma poderosa feiticeira que pode ajudá-lo a recuperar a Coroa de Eldoria, escondida nas Ruínas Antigas.");
+    console.log("De volta a Lumoria, você encontra Elara, uma poderosa feiticeira que pode ajudá-lo a recuperar a Coroa de Aetherion, escondida nas Ruínas Antigas.");
+    console.log("Elara: Herói, a Coroa de Aetherion está protegida por poderosas magias. Eu posso te ajudar a atravessar\nas barreiras, mas precisaremos de ingredientes para um feitiço.");
+    console.log("Pode contar comigo.");
+    console.log("Você parte em busca dos ingredientes necessários. Encontra um grupo de lobos no caminho.");
+
+    escolha = prompt("1 - Lutar contra os lobos, ou 2 - Usar furtividade?\n");
+    do {
+        if (escolha != '1' && escolha != '2') {
+            console.log("\nOpção inválida, jóvem gafanhoto. Tente novamente.\n");
+        } 
+    } while(escolha != '1' && escolha != '2')
+
+        if (escolha == "1") {
+            console.log("Você enfrenta os lobos e consegue os ingredientes, sai ferido mas ganha um nível.\n");
+        } else {
+            console.log("Você evita os lobos e consegue pegar os ingredientes sem ser detectado.\n");
+        }
+
+    console.log("Com os ingredientes em mãos, Elara conjura o feitiço e você atravessa as barreiras mágicas das\nRuínas Antigas.");
+    console.log("Dentro das ruínas, você encontra a Coroa de Aetherion, mas um dragão guardião surge para protegê-la.");
+    console.log("Dragão Guardião: Só o verdadeiro herói pode tomar a Coroa de Aetherion. Prove seu valor!\n");
+
+    escolha = prompt("1 - Lutar contra o dragão, ou 2 - Tentar acalmar o Dragão?\n");
+    do {
+        if (escolha != '1' && escolha != '2') {
+            console.log("\nOpção inválida, jóvem gafanhoto. Tente novamente.\n");
+        } 
+    } while(escolha != '1' && escolha != '2')
+
+    if (escolha == "1") {
+        console.log("Você enfrenta o dragão em uma batalha épica. Suas habilidades são testadas ao máximo,\nmas você prevalece, ganhando a Coroa de Aetherion.");
+    } else {
+        console.log("Você combina os poderes da Lâmina de Valtor e do Cristal de Lumen para acalmar o dragão,\nque reconhece sua verdadeira força e permite que você tome a Coroa de Aetherion.");
+    }
+
+    console.log("\nCom a Coroa de Aetherion em mãos, você retorna a Lumoria, pronto para a batalha final contra Azrak.\n");
+}
+
+function faseFinal() {
+    console.log("Com as Três Grandes Relíquias em mãos, você se prepara para a batalha final contra Azrak, o Senhor\ndas Sombras. A batalha ocorre no Castelo das Sombras, um lugar repleto de perigos e armadilhas.");
+    console.log("- Azrak: Finalmente, o herói aparece. Você realmente acredita que pode me deter? Eu, que fui forjado\nnas trevas e alimentado pelo ódio?");
+    escolha = prompt("1 - Eu não estou sozinho... ou 2 - Você será derrotado...\n");
+
+    do {
+        if (escolha != '1' && escolha != '2') {
+            console.log("\nOpção inválida, jóvem gafanhoto. Tente novamente.\n");
+        } 
+    } while(escolha != '1' && escolha != '2')
+
+    if (escolha == "1") {
+        console.log("Eu não estou sozinho. A luz de Aetherion está comigo.");
+        console.log("- Azrak: Veremos quanto tempo sua luz durará em minhas trevas.");
+    } else {
+        console.log("Você será derrotado, assim como todos os outros antes de você.");
+        console.log("- Azrak: Palavras ousadas para alguém que está prestes a cair diante do poder das sombras.");
+    }
+
+    console.log("\nA batalha final começa.\n");
+    console.log("COMBATE");
+    console.log("Em um momento de descuido de Valtor, você vê sua chance finalmente aparecer");
+    console.log("Você coloca a Coroa de Aetherion sobre sua cabeça, e um poder ancestral flui através de você.\nA coroa concede sabedoria e força imensuráveis, permitindo que você contra-ataque Azrak com precisão\ne poder divinos.");
+    console.log("Você utiliza o poder do Cristal de Lumen para enfraquecer Azrak. O cristal emite uma luz brilhante\nque dissipa as sombras, tornando Azrak vulnerável aos seus ataques.");
+    console.log("Você brande a Lâmina de Valtor, desferindo golpes poderosos contra Azrak. A lâmina brilha intensamente,\nperfurando as defesas sombrias de Azrak.");
+
+    console.log("Após uma intensa batalha, você finalmente derrota Azrak, destruindo suas forças sombrias e trazendo paz\na Aetherion. O reino celebra sua vitória e você é saudado como o maior herói de todos os tempos.");
+    console.log();
 }
 
 module.exports = {
@@ -192,5 +257,4 @@ module.exports = {
     fase2,
     fase3,
     faseFinal,
-
 };
