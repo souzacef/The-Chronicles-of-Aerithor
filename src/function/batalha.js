@@ -1,39 +1,43 @@
 const prompt = require("prompt-sync")();
-const Heroi = require("./models/Heroi");
-const Inimigo = require("./models/Inimigo");
+const Heroi = require("../models/Heroi");
+const Inimigo = require("../models/Inimigo");
 
-function batalha(heroi, adversario) {
+function batalha(heroi, inimigo) {
     let especial = 0;
-
-    console.log("\n======================== Início da Batalha ========================\n");
+    console.log("========================================================================================================");
+    console.log("                   ======================== Início da Batalha ========================                  ");
+    console.log("========================================================================================================");
     heroi.exibirStatus();
-    adversario.exibirVida();
+    inimigo.exibirVida();
 
-    while (heroi.atributos.vida > 0 && adversario.vida > 0) {
-        console.log("\nEscolha sua ação:\n1 - Atacar\n2 - Usar item\n3 - Ataque especial");
-        const escolha = prompt("Escolha sua ação: ");
+    while (heroi.vida > 0 && inimigo.vida > 0) {
+        const escolha = prompt("Escolha sua ação: 1 - Atacar, 2 - Usar item, 3 - Ataque especial ");
 
         if (escolha === "1") {
-            let dano = Math.max(0, Math.floor(heroi.atributos.atqNormal + (heroi.atributos.atqNormal * Math.random() * 0.4) - adversario.defesa));
-            adversario.receberDano(dano);
-            console.log(`Você causou ${dano} de dano ao ${adversario.nome}`);
-            adversario.exibirVida();
+            console.log("============================================= Seu turno ================================================\n");
+            console.log("\nVocê faz um corte rápido com sua espada. ");
+            let dano = Math.max(0, Math.floor(heroi.atqNormal + (heroi.atqNormal * Math.random() * 0.4) - inimigo.defesa));
+            inimigo.receberDano(dano);
+            console.log(`Você causou ${dano} de dano a ${inimigo.nome}`);
+            inimigo.exibirVida();            
         } else if (escolha === "2") {
-            console.log("\nEscolha o item:\n1 - Poção\n2 - Elixir\n3 - Voltar");
-            const itemEscolha = prompt("Escolha o item: ");
+            const itemEscolha = prompt("Escolha o item: 1 - Poção, 2 - Elixir, 3 - Voltar ");
+
             if (itemEscolha === "1") {
                 if (heroi.bolsa.pocoes > 0) {
                     heroi.curar();
                     heroi.bolsa.pocoes--;
                 } else {
-                    console.log("Você não tem mais poções na bolsa");
+                    console.log("Você não tem mais poções na bolsa\n");
+                    continue;
                 }
             } else if (itemEscolha === "2") {
                 if (heroi.bolsa.elixires > 0) {
                     heroi.aumentarForca();
                     heroi.bolsa.elixires--;
                 } else {
-                    console.log("Você não tem mais elixires na bolsa");
+                    console.log("Você não tem mais elixires na bolsa\n");
+                    continue;
                 }
             } else if (itemEscolha === "3") {
                 continue;
@@ -42,12 +46,19 @@ function batalha(heroi, adversario) {
             }
         } else if (escolha === "3") {
             if (especial >= 3) {
-                let dano = Math.max(0, Math.floor(heroi.atributos.atqEspecial * 3 - adversario.defesa));
-                adversario.receberDano(dano);
-                console.log(`Hadouken! Você causou ${dano} de dano ao ${adversario.nome}`);
+                let dano = Math.max(0, Math.floor((heroi.atqNormal * 3) - inimigo.defesa));
+                inimigo.receberDano(dano);
+                console.log("ATAQUE ESPECIAL!!!!");
+                console.log(`Hadouken! Você causou ${dano} de dano ao ${inimigo.nome}`);
                 especial = 0;
+
+                if (inimigo.vida <= 0) {
+                    console.log(`Você derrotou ${inimigo.nome}!\n`);
+                    heroi.levelUp();
+                    return;
+                }
             } else {
-                console.log("Ataque especial ainda não está pronto.");
+                console.log("Ataque especial ainda não está pronto.\n");
                 continue;
             }
         } else {
@@ -55,17 +66,19 @@ function batalha(heroi, adversario) {
             continue;
         }
 
-        if (adversario.vida <= 0) {
-            console.log(`\nVocê derrotou ${adversario.nome}!\n`);
+        if (inimigo.vida <= 0) {
+            console.log(`Você derrotou ${inimigo.nome}!\n`);
             heroi.levelUp();
             return;
         }
 
-        let danoAdversario = Math.max(0, Math.floor(adversario.atqNormal + (adversario.atqNormal * Math.random() * 0.4) - heroi.atributos.defesa));
-        heroi.receberDano(danoAdversario);
-        console.log(`${adversario.nome} causou ${danoAdversario} de dano a você`);
+        console.log("=========================================== Turno do inimigo ===========================================");
+        let danoInimigo = Math.max(0, Math.floor(inimigo.atqNormal + (inimigo.atqNormal * Math.random() * 0.4) - heroi.defesa));
+        heroi.receberDano(danoInimigo);
+        console.log(`${inimigo.nome} causou ${danoInimigo} de dano a você`);
+        
 
-        if (heroi.atributos.vida <= 0) {
+        if (heroi.vida <= 0) {
             console.log("\nVocê foi derrotado. A escuridão se espalha por Eldoria.\n");
             console.log("GAME OVER");
             process.exit();
@@ -74,9 +87,9 @@ function batalha(heroi, adversario) {
         if (especial < 3) {
             especial++;
             if (especial < 3) {
-                console.log("Carregando especial...");
+                console.log(`Carregando especial...${especial}/3\n`);
             } else {
-                console.log("Especial pronto!");
+                console.log("Especial pronto!\n");
             }
         }
     }

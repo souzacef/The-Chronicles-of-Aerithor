@@ -1,10 +1,9 @@
 class Personagem {
-    constructor(nome, vida, atqNormal, defesa, atqEspecial) {
+    constructor(nome, vida, atqNormal, defesa) {
         this.nome = nome;
         this.vida = vida;
         this.atqNormal = atqNormal;
-        this.defesa = defesa;
-        this.atqEspecial = atqEspecial;
+        this.defesa = defesa;        
     }
 
     receberDano(dano) {

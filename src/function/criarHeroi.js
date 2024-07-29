@@ -7,27 +7,26 @@ function criarHeroi() {
     const nomeRegex = /^[a-zA-Z]+$/;
 
     do {
+        console.log("Escolha com sabedoria e não use espaços, caractéres especiais ou números.");
         nome = prompt("Qual nome deseja utilizar em sua jornada, bravo herói? ").trim();
         if (!nome) {
-            console.log("O nome não pode ser vazio. Por favor, insira um nome, valente guerreiro. ");
+            console.log("\nO nome não pode ser vazio. Por favor, insira um nome, valente guerreiro. ");
         } else if (!nomeRegex.test(nome)) {
             console.log("O nome deve conter apenas letras, sem espaços ou caracteres especiais. Tente novamente. ");
             nome = ''; 
         }
     } while (!nome);
 
-    console.log(`\n${nome}! Assim como na profecia!`);
-    console.log("Com o nome aprovado pelo Conselho dos Sábios, você começa sua jornada épica. Prepare-se para enfrentar\ndesafios e provar seu valor nas terras místicas de Aetherion.\n");
-
-    let atributos = {        
-        vida: 100,
-        atqNormal: 10,
-        defesa: 5
-    }
+    console.log(`\n${nome}! Assim como na profecia!\n`);
+    console.log("Narrador: Com o nome aprovado pelo Conselho dos Sábios, você começa sua jornada épica. Prepare-se para enfrentar\ndesafios e provar seu valor nas terras místicas de Aetherion.\n");
 
     let nivel = 1;
+    let vida = 100;
+    let atqNormal = 12;
+    let defesa = 3;
+    
 
-    const heroi = new Heroi(nome, nivel, atributos);
+    const heroi = new Heroi(nome, nivel, vida, atqNormal, defesa);
     heroi.exibirStatus();
 
     return heroi;

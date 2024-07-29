@@ -1,14 +1,22 @@
 const Personagem = require("./Personagem");
 
 class Heroi extends Personagem {
-    constructor(nome, nivel, vida, atqNormal, defesa, atqEspecial) {
-        super(nome, vida, atqNormal, defesa, atqEspecial);
+    constructor(nome, nivel, vida, atqNormal, defesa) {
+        super(nome, vida, atqNormal, defesa);
+        this.nome = nome
         this.nivel = nivel;
-        this.gil = 30;
+        this.vida = vida;
+        this.atqNormal = atqNormal;
+        this.defesa = defesa;        
+        this.gil = 50;
+        this.bolsa = {
+            pocoes: 0,
+            elixires:0
+        };
     }
 
     exibirStatus() {
-        console.log(`\nNível: ${this.nivel}\nVida: ${this.vida}\nAtaque: ${this.atqNormal}\nDefesa: ${this.defesa}\nEspecial: ${this.atqEspecial}\n`);
+        console.log(`Nível: ${this.nivel}\nVida: ${this.vida}\nAtaque: ${this.atqNormal}\nDefesa: ${this.defesa}`);
     }
 
     exibirVida() {
@@ -29,17 +37,16 @@ class Heroi extends Personagem {
 
     receberDano(dano) {
         this.vida -= dano;
-        console.log(`\nVocê foi atacado. OUCH!\n`);
+        console.log(`\nVocê recebeu um ataque. OUCH!`);
         this.exibirVida();
     }
 
     levelUp() {
-        console.log(`\nParabéns, você subiu de nível!`);
+        console.log("Parabéns, você subiu de nível!");
         this.nivel++;
         this.vida += 10;
         this.atqNormal += 5;
-        this.defesa += 3;
-        this.atqEspecial += 5;
+        this.defesa += 2;        
         this.exibirStatus();
     }
 

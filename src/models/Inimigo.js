@@ -1,20 +1,17 @@
 const Personagem = require("./Personagem");
 
 class Inimigo extends Personagem {
-    constructor(nome, vida, atqNormal, defesa, atqEspecial) {
-        super(nome, vida, atqNormal, defesa, atqEspecial);
+    constructor(nome, vida, atqNormal, defesa) {
+        super(nome, vida, atqNormal, defesa);
     }
 
     receberDano(dano) {
         this.vida -= dano;
-        console.log(`${this.nome} foi atacado e está furioso.`);
-        this.exibirVida();
+        console.log(`${this.nome} recebeu ataque e está em furia.`);        
     }
 
     exibirVida() {
-        console.log();
-        console.log(`Vida do ${this.nome}: ${this.vida}`);
-        console.log();
+        console.log(`\nVida de ${this.nome}: ${this.vida}\n`);        
     }
 }
 

@@ -1,13 +1,16 @@
 const prompt = require("./prompt/prompt");
 
-const Heroi = require("./models/Heroi");
-const Inimigo = require("./models/Inimigo");
-
-const { introducao, epilogo, chegadaEmThaloria, dialogoLyria, fase1 } = require("./function/dialogos");
+const introducao = require("./function/introducao")
 const criarHeroi = require("./function/criarHeroi");
+const fase1 = require("./function/levels/fase1");
+const fase2 = require("./function/levels/fase2");
 
-introducao();
-const heroi = criarHeroi();
-console.log(`\nAssim, nosso herói ${heroi.nome} inicia sua aventura. Sua primeira parada: Aldeia de Thaloria\n`);
+function main() {
+    //introducao();
+    const heroi = criarHeroi();
+    //console.log(`\nAssim, nosso herói ${heroi.nome} inicia sua aventura. Sua primeira parada: Aldeia de Thaloria.`);
+    //fase1(heroi);
+    fase2(heroi);
+}
 
-
+main();
