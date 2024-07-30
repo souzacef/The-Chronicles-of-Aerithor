@@ -52,7 +52,7 @@ class Heroi extends Personagem {
 
     gastarGil(valor) {
         this.gil -= valor;
-        console.log(`\nVocê gastou G$ ${valor}. Você ainda possui G$ ${this.gil}\n`);
+        console.log(`\nVocê gastou G$ ${valor}. Você possui G$ ${this.gil}\n`);
     }
 
     guardarGil(valor) {
