@@ -65,7 +65,7 @@ async function fase1(heroi) {
         await delay(1000);
 
         const lyria = new Inimigo("Lyria", 30, 6, 3);
-        batalha(heroi, lyria);                
+        await batalha(heroi, lyria);                
     } else {
 
         await delay(500);
@@ -88,7 +88,7 @@ async function fase1(heroi) {
         
         const lyria = new Inimigo("Lyria", 30, 6, 3);
 
-        batalha(heroi, lyria);
+        await batalha(heroi, lyria);
     } 
 
     await delay(2000);
@@ -142,7 +142,7 @@ async function fase1(heroi) {
 
         await delay(1000);
 
-        batalha(heroi, gruk);        
+        await batalha(heroi, gruk);        
     }
 
     console.log("Você continua sua jornada pela floresta até encontrar uma árvore gigante com a Lâmina de Valtor cravada\nem seu tronco. Um guardião surge, exigindo que você prove seu valor.\n");
@@ -175,7 +175,7 @@ async function fase1(heroi) {
         await delay(1000);
 
         const zephyr = new Inimigo("Zephyr", 45, 8, 6)
-        batalha(heroi, zephyr);
+        await batalha(heroi, zephyr);
 
         await delay(1000);
 
