@@ -69,8 +69,8 @@ function fase1(heroi) {
 
     } else {
         console.log("A trilha escura leva a uma emboscada de goblins. ");
-        const goblin = new Inimigo("Goblin", 35, 6, 5)
-        batalha(heroi, goblin);        
+        const gruk = new Inimigo("Gruk", 35, 6, 5)
+        batalha(heroi, gruk);        
     }
 
     console.log("Você continua sua jornada pela floresta até encontrar uma árvore gigante com a Lâmina de Valtor\ncravada em seu tronco. Um guardião surge, exigindo que você prove seu valor.\n");
@@ -87,8 +87,8 @@ function fase1(heroi) {
     
     if (escolha == "1") {
         console.log("Você enfrenta o guardião em uma batalha épica.\n");
-        const grifo = new Inimigo("Grifo", 45, 8, 6)
-        batalha(heroi, grifo);
+        const zephyr = new Inimigo("Zephyr", 45, 8, 6)
+        batalha(heroi, zephyr);
         console.log("Suas habilidades são testadas, mas você prevalece, ganhando a Lâmina de Valtor.\n");
     } else {
         console.log("Você fala ao guardião sobre sua missão e as ameaças que Aetherion enfrenta. Comovido por sua\ndeterminação e coragem, o guardião permite que você tome a Lâmina de Valtor sem lutar.");

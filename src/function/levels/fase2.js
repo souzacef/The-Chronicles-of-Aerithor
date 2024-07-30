@@ -91,8 +91,8 @@ function fase2(heroi) {
     } while(escolha != '1' && escolha != '2');
 
     if (escolha == "1") {
-        const generalOrc = new Inimigo("General Orc", 50, 10, 7);
-        batalha(heroi, generalOrc);
+        const drak = new Inimigo("Drak", 50, 10, 7);
+        batalha(heroi, drak);
         console.log("\nVocê enfrenta os orcs em uma batalha feroz. Embora saia vitorioso,\nvocê sofre alguns ferimentos.");
     } else {
         console.log("========================================================================================================\n");

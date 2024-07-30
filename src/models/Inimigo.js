@@ -7,7 +7,7 @@ class Inimigo extends Personagem {
 
     receberDano(dano) {
         this.vida -= dano;
-        console.log(`${this.nome} recebeu ataque e está em furia.`);        
+        console.log(`\n${this.nome} recebeu ataque e está em furia.`);        
     }
 
     exibirVida() {

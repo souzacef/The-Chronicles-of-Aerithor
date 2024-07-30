@@ -79,8 +79,10 @@ function batalha(heroi, inimigo) {
         
 
         if (heroi.vida <= 0) {
-            console.log("\nVocê foi derrotado. A escuridão se espalha por Eldoria.\n");
-            console.log("GAME OVER");
+            console.log(`\nVocê lutou bravamente, mas ${inimigo.nome} prevaleceu. Com sua derrota,\na luz de esperança em Eldoria se extingue, e a escuridão se espalha por todo o reino.\nQue sua coragem seja lembrada, herói caído.\n`);
+            console.log("\n========================================================================================================");
+            console.log("=============================================== GAME OVER ==============================================");
+            console.log("========================================================================================================\n");
             process.exit();
         }
 
