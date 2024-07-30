@@ -1,19 +1,21 @@
-function epilogo() {
-    console.log("\n            =================================== Epílogo =======================================            \n");
-    console.log("Eldorion, o Sábio:");
-    console.log("Parabéns, herói. Com Azrak derrotado, as Três Grandes Relíquias estão seguras e Aetherion pode finalmente\nrespirar em paz. Você será lembrado como o Salvador de Aetherion, e sua história será contada por gerações.\n");
+function epilogo(heroi) {
+    console.log("\n========================================================================================================");
+    console.log("================================================ Epílogo ===============================================");
+    console.log("========================================================================================================\n");
     
-    console.log("Lyria:");
-    console.log("Foi uma honra lutar ao seu lado. Sempre terei um lugar para você em Lumoria.\n");
+    console.log(`Eldorion, o Sábio: Parabéns, ${heroi.nome}! Com a queda de Azrak, as Três Grandes Relíquias estão seguras,\ne a paz reina novamente em Aetherion. Você será eternamente lembrado como o Salvador de Aetherion.\n`);
+    
+    console.log(`Lyria: Foi uma honra lutar ao seu lado, ${heroi.nome}. Sempre terá um lugar especial em Lumoria. Que a luz\nguie seus passos.\n`);
 
-    console.log("Thoren:");
-    console.log("Volte sempre que precisar de bons negócios, herói. Tenho certeza de que nossas\njornadas se cruzarão novamente.\n");
+    console.log(`Thoren: Volte sempre que precisar de bons negócios, ${heroi.nome}. Estou certo de que nossas jornadas se\ncruzarão novamente.\n`);
 
-    console.log("Elara:");
-    console.log("Seu destino é grandioso, herói. A magia de Aetherion sempre estará ao seu lado.\n");
+    console.log(`Elara: Seu destino é grandioso, ${heroi.nome}. Que a magia de Aetherion esteja sempre ao seu lado.\n`);
 
-    console.log("E assim, a paz e a prosperidade retornam a Aetherion. O herói é celebrado em\ntodas as terras, e uma nova era de luz e esperança começa.\n");
-    console.log("                               Fim!\n");
+    console.log(`Com a vitória de ${heroi.nome}, a paz e a prosperidade retornam a Aetherion. As lendas de sua bravura ecoam\npor todas as terras, marcando o início de uma nova era de esperança e luz.\n`);
+
+    console.log("\n========================================================================================================");
+    console.log("================================================ Fim! ==================================================");
+    console.log("========================================================================================================\n");
 }
 
 module.exports = epilogo;

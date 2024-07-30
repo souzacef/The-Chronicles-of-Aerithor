@@ -48,7 +48,7 @@ function batalha(heroi, inimigo) {
             if (especial >= 3) {
                 let dano = Math.max(0, Math.floor((heroi.atqNormal * 3) - inimigo.defesa));
                 inimigo.receberDano(dano);
-                console.log("ATAQUE ESPECIAL!!!!");
+                console.log("\nATAQUE ESPECIAL!!!!");
                 console.log(`Hadouken! Você causou ${dano} de dano ao ${inimigo.nome}`);
                 especial = 0;
 

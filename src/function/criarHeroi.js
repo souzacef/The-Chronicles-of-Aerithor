@@ -18,7 +18,7 @@ function criarHeroi() {
     } while (!nome);
 
     console.log(`\n${nome}! Assim como na profecia!\n`);
-    console.log("Narrador: Com o nome aprovado pelo Conselho dos Sábios, você começa sua jornada épica. Prepare-se para enfrentar\ndesafios e provar seu valor nas terras místicas de Aetherion.\n");
+    console.log("Narrador: Com o nome aprovado pelo Conselho dos Sábios, você começa sua jornada épica. Prepare-se para\nenfrentar desafios e provar seu valor nas terras místicas de Aetherion.\n");
 
     let nivel = 1;
     let vida = 100;

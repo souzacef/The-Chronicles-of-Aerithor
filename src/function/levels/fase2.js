@@ -9,7 +9,7 @@ function fase2(heroi) {
     console.log("========================================================================================================\n");
 
     console.log("De volta a Lumoria, você encontra Thoren, um mercador conhecido por seus itens raros e poderosos. Ele\noferece itens que podem ajudar em sua próxima missão: recuperar o Cristal de Lumen, escondido nas\nMontanhas Sombrias.\n");
-    console.log("Thoren: Saudações, herói! Bem-vindo à minha loja. Sou Thoren, o mercador mais astuto destas terras. Como\nposso ajudá-lo hoje? Você pode comprar itens valiosos, treinar suas habilidades, ou simplesmente\nsair e continuar sua jornada\n");
+    console.log("Thoren: Saudações, herói! Bem-vindo à minha loja. Sou Thoren, o mercador mais astuto destas terras. Como\nposso ajudá-lo hoje? Você pode comprar itens valiosos, treinar suas habilidades, ou simplesmente sair e\ncontinuar sua jornada.\n");
 
     let escolha;
 
@@ -42,7 +42,7 @@ function fase2(heroi) {
                     console.log("Thoren: Excelente escolha!");            
                     heroi.gastarGil(10);
                     heroi.bolsa.pocoes++;
-                    console.log(`1 poção comprada. Quantidade na bolsa: ${heroi.bolsa.pocoes}`);
+                    console.log(`1 poção comprada. Quantidade na bolsa: ${heroi.bolsa.pocoes}\n`);
                 } else {
                     console.log("Você não tem Gil suficiente para realizar essa compra.\n");                
                 }
@@ -52,7 +52,7 @@ function fase2(heroi) {
                     console.log("Thoren: Excelente escolha!");
                     heroi.gastarGil(15);
                     heroi.bolsa.elixires++;
-                    console.log(`1 elixir comprado. Quantidade na bolsa: ${heroi.bolsa.elixires}`);
+                    console.log(`1 elixir comprado. Quantidade na bolsa: ${heroi.bolsa.elixires}\n`);
                 } else {
                     console.log("Você não tem Gil suficiente para realizar essa compra.\n");                
                 }
@@ -75,7 +75,7 @@ function fase2(heroi) {
 
         } else {
             console.log("\nVou continuar minha jornada. Até a próxima, Thoren.\n");
-            console.log("Thoren: Boa sorte, herói. Que a fortuna sorria para você em seu caminho.\nVolte sempre que precisar!\n");
+            console.log("Thoren: Boa sorte, herói. Que a fortuna sorria para você em seu caminho. Volte sempre que precisar!\n");
             break;
         }
     }
@@ -93,15 +93,14 @@ function fase2(heroi) {
     if (escolha == "1") {
         const drak = new Inimigo("Drak", 50, 10, 7);
         batalha(heroi, drak);
-        console.log("\nVocê enfrenta os orcs em uma batalha feroz. Embora saia vitorioso,\nvocê sofre alguns ferimentos.");
+        console.log("\nVocê enfrenta os orcs em uma batalha feroz. Embora saia vitorioso,você sofre alguns ferimentos.");
     } else {
-        console.log("========================================================================================================\n");
+        
         console.log("\nVocê decide evitar o confronto direto e encontra uma passagem oculta que leva a um antigo templo.");
         console.log("Dentro do templo, você encontra o Cristal de Lumen. Porém, antes de pegá-lo, um enigma precisa ser\nresolvido.");
-        console.log("\nVocê se depara com duas portas grandes, com algo escrito nelas. Ao pousar suas mãos pelas portas, as\nmarcações ganham um leve brilho, e que traz uma surpresa adicional:");
-        console.log("Um idioma que há muito você não tivera contato. A língua élfica.\n");
+        console.log("\nVocê se depara com duas portas grandes, com algo escrito nelas. Ao pousar suas mãos pelas portas, as\nmarcações ganham um leve brilho, e que traz uma surpresa adicional: Um idioma que há muito você não\ntivera contato. A língua élfica.\n");        
         console.log("Ao se recuperar do breve choque, você começa a decifrar as inscrições nas portas.");
-        console.log("A-HA! A chave para o enigma!");
+        console.log("\nA-HA! A chave para o enigma!\n");
         console.log("\nDIGA, AMIGO, E ENTRE.\n");        
 
         let resposta = prompt("Qual é a resposta? Dica, --> Mellon <-- ").toUpperCase();
