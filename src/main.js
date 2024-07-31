@@ -9,13 +9,17 @@ const faseFinal = require("./function/levels/faseFinal");
 const epilogo = require("./function/epilogo");
 
 async function main() {
-    //await introducao();
+    // Introdução à história
+    await introducao();
+    // Criação do herói principal
     const heroi = await criarHeroi();    
+    // Início das fases do jogo
     await fase1(heroi);
-    //await fase2(heroi);
-    //await fase3(heroi);
-    //await faseFinal(heroi);
-    //await epilogo(heroi);
+    await fase2(heroi);
+    await fase3(heroi);
+    await faseFinal(heroi);
+    // Epílogo após a conclusão da história
+    await epilogo(heroi);
 }
 
 main();

@@ -189,7 +189,7 @@ async function fase2(heroi) {
         await delay(500);
 
         const drak = new Inimigo("Drak", 50, 10, 7);
-        batalha(heroi, drak);
+        await batalha(heroi, drak);
 
         await delay(1000);
 

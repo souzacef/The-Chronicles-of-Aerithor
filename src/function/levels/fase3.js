@@ -49,7 +49,7 @@ async function fase3(heroi) {
             await delay(500);
 
             const fenrir = new Inimigo("Fenrir" , 55, 12, 8);
-            batalha(heroi, fenrir);
+            await batalha(heroi, fenrir);
 
             await delay(1000);
 
@@ -119,7 +119,7 @@ async function fase3(heroi) {
         await delay(500);
 
         const smaug = new Inimigo("Smaug" , 60, 15, 10)
-        batalha(heroi,smaug );
+        await batalha(heroi,smaug );
 
         await delay(1000);
 

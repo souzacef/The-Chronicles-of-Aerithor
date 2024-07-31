@@ -5,6 +5,7 @@ const Inimigo = require("../models/Inimigo");
 const { promisify } = require("util");
 const delay = promisify(setTimeout);
 
+//Função de batalha entre o herói e o inimigo.
 async function batalha(heroi, inimigo) {
 
     await delay(1000);

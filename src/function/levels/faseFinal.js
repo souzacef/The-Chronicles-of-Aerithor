@@ -67,7 +67,7 @@ async function faseFinal(heroi) {
     await delay(1000);
 
     const azrak = new Inimigo("Azrak, o Senhor das Sombras" , 120, 20, 15);
-    batalha(heroi, azrak);
+    await batalha(heroi, azrak);
 
     await delay(1000);
 
