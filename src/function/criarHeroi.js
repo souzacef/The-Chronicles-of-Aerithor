@@ -12,8 +12,7 @@ async function criarHeroi() {
 
     // Aguarda 2 segundos antes de solicitar o nome
     await delay(2000);
-
-    const nomeRegex = /^[a-zA-Z]+$/;
+    const nomeRegex = /^[a-zA-Z]+$/; // Não aceita caracteres inválidos
 
     // Loop para garantir que o nome do herói seja válido
     do {
@@ -33,12 +32,10 @@ async function criarHeroi() {
 
     // Aguarda 1 segundo antes de continuar
     await delay(1000);
-
     console.log(`\n${nome}! Assim como na profecia!\n`);
 
     // Aguarda 1 segundo antes de continuar
     await delay(1000);
-
     console.log("Com o nome aprovado pelo Conselho dos Sábios, você começa sua jornada épica. Prepare-se para\nenfrentar desafios e provar seu valor nas terras místicas de Aetherion.\n");
 
     // Aguarda 2 segundos antes de continuar
@@ -47,11 +44,12 @@ async function criarHeroi() {
     // Inicialização dos atributos do herói
     let nivel = 1;
     let vida = 100;
-    let atqNormal = 12;
+    let atqNormal = 10;
     let defesa = 3;
 
     // Criação do objeto herói
     const heroi = new Heroi(nome, nivel, vida, atqNormal, defesa);
+    
     // Exibição do status inicial do herói
     heroi.exibirStatus();
 
